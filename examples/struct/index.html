@@ -1,7 +1,15 @@
 <html>
 	<head>Hello-Cargo</head>
 	<body>
-		<script type="text/javascript" src="./hello-cargo.js"></script>
+		<canvas id="canvas" width="640" height="480"></canvas>                                                                      
+		<script type="text/javascript">                       
+			var Module = {                                
+				"canvas": document.getElementById('canvas'),    
+				"wasmBinaryFile": "./target/wasm32-unknown-emscripten/release/deps/rust_webassembly_array-TODO.wasm"
+			};         
+		</script>          
+
+		<script type="text/javascript" src="./target/wasm32-unknown-emscripten/release/rust-webassembly-array.js"></script>
 		<script type="text/javascript">
 			Module.addOnInit(function () {
 				var story = "One apon a time";
