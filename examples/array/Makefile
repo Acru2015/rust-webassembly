@@ -10,4 +10,4 @@ copyIndex:
 	cp ./index.html target/wasm32-unknown-emscripten/release/
 
 link:
-	(cd target/wasm32-unknown-emscripten/release/ ; ln -s deps/*.wasm ./)
+	(cd target/wasm32-unknown-emscripten/release/ ; ln -s deps/*.wasm ./rust_webassembly_array.wasm)
